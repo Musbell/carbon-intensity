@@ -210,6 +210,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/{from}/fw24h:
     get:
+      operationId: intensityFw24h
       tags:
         - intensity
       summary: Get Carbon Intensity data 24hrs forwards from specific datetime.
@@ -243,6 +244,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/{from}/fw48h:
     get:
+      operationId: intensityFw48h
       tags:
         - intensity
       summary: Get Carbon Intensity data 48hrs forwards from specific datetime.
@@ -276,6 +278,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/{from}/pt24h:
     get:
+      operationId: intensityPt24h
       tags:
         - intensity
       summary: Get Carbon Intensity data 24hrs in the past of a specific datetime.
@@ -309,6 +312,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/{from}/{to}:
     get:
+      operationId: intensityFromTo
       tags:
         - intensity
       summary: Get Carbon Intensity data between from and to datetime
@@ -349,6 +353,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/stats/{from}/{to}:
     get:
+      operationId: intensityStats
       tags:
         - stats
       summary: Get Carbon Intensity statistics
@@ -389,6 +394,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /intensity/stats/{from}/{to}/{block}:
     get:
+      operationId: intensityStatsFromToBlock
       tags:
         - stats
       summary: Get block average Carbon Intensity statistics
@@ -459,42 +465,6 @@ components:
                     type: number
                   index:
                     type: string
-    Factors:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              Biomass:
-                type: number
-              Coal:
-                type: number
-              Dutch Imports:
-                type: number
-              French Imports:
-                type: number
-              Gas (Combined Cycle):
-                type: number
-              Gas (Open Cycle):
-                type: number
-              Hydro:
-                type: number
-              Irish Imports:
-                type: number
-              Nuclear:
-                type: number
-              Oil:
-                type: number
-              Other:
-                type: number
-              Pumped Storage:
-                type: number
-              Solar:
-                type: number
-              Wind:
-                type: number
     Error:
       type: object
       properties:
