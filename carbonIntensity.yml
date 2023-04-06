@@ -324,7 +324,6 @@ paths:
             example: 2023-01-25T12:35Z
         - name: to
           in: path
-          description: End datetime in in ISO8601 format YYYY-MM-DDThh:mmZ
           required: true
           schema:
             type: string
@@ -365,7 +364,6 @@ paths:
         - name: to
           in: path
           required: true
-          description: End datetime in ISO8601 format YYYY-MM-DDThh:mmZ.
           schema:
             type: string
             example: 2023-01-26T12:35Z
